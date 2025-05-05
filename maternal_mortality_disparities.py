@@ -97,9 +97,7 @@ if __name__ == "__main__":
         #plt.savefig("posterior_diff_plots.png", dpi=300, bbox_inches = "tight")
 
 
-#save for Linkedin portfolia - Time series forecasting predict death rates of black women.
-#https://areding.github.io/6420-pymc/unit10/Unit10-sunspots.html
-#filtered well, but multiple diverenges look there, fixed
+#Time series forecasting predict death rates of black women.
         df_filtered = df[df['Related'] == 'pregnancy-related']
         df_filtred = df_filtered[(df_filtered['Race/ethnicity'] != "All")&(df['Race/ethnicity'] != "Race/ethnicity")]
         df_grouped = df_filtered.groupby(["Year", "Race/ethnicity"])['Deaths'].sum().reset_index()
